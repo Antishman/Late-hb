@@ -122,81 +122,82 @@
             50% { transform: scale(1) rotate(180deg); opacity: 1; }
             100% { transform: scale(0) rotate(360deg); opacity: 0; }
         }
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .verse { font-size: 1.2rem; }
-    .birthday-wish { font-size: 1.1rem; }
-}
-</style>
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .verse { font-size: 1.2rem; }
+            .birthday-wish { font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1>Belated Birthday Blessings</h1>
-
-<div class="verse">
-    "Blessed is she who has believed that the Lord would fulfill 
-    His promises to her!"
-    <br>
-    - Luke 1:45
-</div>
-
-<div class="birthday-wish">
-    Though this wish comes a bit late,<br>
-    May God's promises continue to manifest in your life.<br>
-    Like Mary's faith brought forth miracles,<br>
-    May your faith lead you to countless blessings.<br>
-    Happy Belated Birthday!
-</div>
-</div>
-
-<script>
-// Create butterflies
-function createButterflies() {
-    for (let i = 0; i < 5; i++) {
-        const butterfly = document.createElement('div');
-        butterfly.className = 'butterfly';
-        butterfly.innerHTML = '🦋';
-        butterfly.style.top = Math.random() * 100 + 'vh';
-        butterfly.style.animationDelay = (i * 2) + 's';
-        document.body.appendChild(butterfly);
-    }
-}
-
-// Create floating hearts
-function createHearts() {
-    setInterval(() => {
-        const heart = document.createElement('div');
-        heart.className = 'heart';
-        heart.innerHTML = '❤';
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.bottom = '0';
-        document.body.appendChild(heart);
+    <div class="container">
+        <h1>Belated Birthday Blessings</h1>
         
-        setTimeout(() => {
-            heart.remove();
-        }, 4000);
-    }, 300);
-}
+        <div class="verse">
+            "Blessed is she who has believed that the Lord would fulfill 
+            His promises to her!"
+            <br>
+            - Luke 1:45
+        </div>
 
-// Create glitter effect
-function createGlitter() {
-    setInterval(() => {
-        const glitter = document.createElement('div');
-        glitter.className = 'glitter';
-        glitter.style.left = Math.random() * 100 + 'vw';
-        glitter.style.top = Math.random() * 100 + 'vh';
-        document.body.appendChild(glitter);
-        
-        setTimeout(() => {
-            glitter.remove();
-        }, 2000);
-    }, 200);
-}
+        <div class="birthday-wish">
+            Though this wish comes a bit late,<br>
+            May God's promises continue to manifest in your life.<br>
+            Like Mary's faith brought forth miracles,<br>
+            May your faith lead you to countless blessings.<br>
+            Happy Belated Birthday!
+        </div>
+    </div>
 
-// Initialize animations
-createButterflies();
-createHearts();
-createGlitter();
-</script>
+    <script>
+        // Create butterflies
+        function createButterflies() {
+            for (let i = 0; i < 5; i++) {
+                const butterfly = document.createElement('div');
+                butterfly.className = 'butterfly';
+                butterfly.innerHTML = '🦋';
+                butterfly.style.top = Math.random() * 100 + 'vh';
+                butterfly.style.animationDelay = (i * 2) + 's';
+                document.body.appendChild(butterfly);
+            }
+        }
+
+        // Create floating hearts
+        function createHearts() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.bottom = '0';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }, 300);
+        }
+
+        // Create glitter effect
+        function createGlitter() {
+            setInterval(() => {
+                const glitter = document.createElement('div');
+                glitter.className = 'glitter';
+                glitter.style.left = Math.random() * 100 + 'vw';
+                glitter.style.top = Math.random() * 100 + 'vh';
+                document.body.appendChild(glitter);
+                
+                setTimeout(() => {
+                    glitter.remove();
+                }, 2000);
+            }, 200);
+        }
+
+        // Initialize animations
+        createButterflies();
+        createHearts();
+        createGlitter();
+    </script>
 </body>
 </html>
